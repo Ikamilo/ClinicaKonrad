@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @medic.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @medic.apellido %>
+</p>
+
+<p>
+  <strong>Identificacion:</strong>
+  <%= @medic.identificacion %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @medic.celular %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @medic.tipo %>
+</p>
+
+<%= link_to 'Edit', edit_medic_path(@medic) %> |
+<%= link_to 'Back', medics_path %>

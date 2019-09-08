@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  consulting_room: one
+  patient: 
+  medic: one
+  fecha_cita: 2019-09-07
+  hora_inicio: 2019-09-07 13:53:59
+  hora_fin: 2019-09-07 13:53:59
+  motivo: MyString
+
+two:
+  consulting_room: two
+  patient: 
+  medic: two
+  fecha_cita: 2019-09-07
+  hora_inicio: 2019-09-07 13:53:59
+  hora_fin: 2019-09-07 13:53:59
+  motivo: MyString

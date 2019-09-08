@@ -1,0 +1,55 @@
+require "application_system_test_case"
+
+class AppointmentsTest < ApplicationSystemTestCase
+  setup do
+    @appointment = appointments(:one)
+  end
+
+  test "visiting the index" do
+    visit appointments_url
+    assert_selector "h1", text: "Appointments"
+  end
+
+  test "creating a Appointment" do
+    visit appointments_url
+    click_on "New Appointment"
+
+    fill_in "Consulting room", with: @appointment.consulting_room_id
+    fill_in "Fecha cita", with: @appointment.fecha_cita
+    fill_in "Hora fin", with: @appointment.hora_fin
+    fill_in "Hora inicio", with: @appointment.hora_inicio
+    fill_in "Medic", with: @appointment.medic_id
+    fill_in "Motivo", with: @appointment.motivo
+    fill_in "Patient", with: @appointment.patient
+    click_on "Create Appointment"
+
+    assert_text "Appointment was successfully created"
+    click_on "Back"
+  end
+
+  test "updating a Appointment" do
+    visit appointments_url
+    click_on "Edit", match: :first
+
+    fill_in "Consulting room", with: @appointment.consulting_room_id
+    fill_in "Fecha cita", with: @appointment.fecha_cita
+    fill_in "Hora fin", with: @appointment.hora_fin
+    fill_in "Hora inicio", with: @appointment.hora_inicio
+    fill_in "Medic", with: @appointment.medic_id
+    fill_in "Motivo", with: @appointment.motivo
+    fill_in "Patient", with: @appointment.patient
+    click_on "Update Appointment"
+
+    assert_text "Appointment was successfully updated"
+    click_on "Back"
+  end
+
+  test "destroying a Appointment" do
+    visit appointments_url
+    page.accept_confirm do
+      click_on "Destroy", match: :first
+    end
+
+    assert_text "Appointment was successfully destroyed"
+  end
+end

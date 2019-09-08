@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Medics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Identificacion</th>
+      <th>Celular</th>
+      <th>Tipo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medics.each do |medic| %>
+      <tr>
+        <td><%= medic.nombre %></td>
+        <td><%= medic.apellido %></td>
+        <td><%= medic.identificacion %></td>
+        <td><%= medic.celular %></td>
+        <td><%= medic.tipo %></td>
+        <td><%= link_to 'Show', medic %></td>
+        <td><%= link_to 'Edit', edit_medic_path(medic) %></td>
+        <!--<td><%= link_to 'Destroy', medic, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medic', new_medic_path %>
+<%= link_to 'Back', appointments_path %>

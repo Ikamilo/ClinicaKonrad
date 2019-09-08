@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre medico</strong>
+  <%= Medic.find_by(id: @appointment.medic_id).nombre %>
+</p>
+
+<p>
+  <strong>Apellido medico</strong>
+  <%= Medic.find_by(id: @appointment.medic_id).apellido %>
+</p>
+
+<p>
+  <strong>Nombre paciente</strong>
+  <%= Patient.find_by(id: @appointment.patient_id).nombre %>
+</p>
+
+<p>
+  <strong>Apellido paciente</strong>
+  <%= Patient.find_by(id: @appointment.patient_id).apellido %>
+</p>
+
+<p>
+  <strong>Nombre del consiltorio</strong>
+  <%= ConsultingRoom.find_by(id: @appointment.consulting_room_id).nombre %>
+</p>
+
+<p>
+  <strong>Codigo del consultorio</strong>
+  <%= ConsultingRoom.find_by(id: @appointment.consulting_room_id).codigo %>
+</p>
+
+<p>
+  <strong>Ubicacion del consultorio</strong>
+  <%= ConsultingRoom.find_by(id: @appointment.consulting_room_id).ubicacion %>
+</p>
+
+<p>
+  <strong>Fecha cita:</strong>
+  <%= @appointment.fecha_cita %>
+</p>
+
+<p>
+  <strong>Hora inicio:</strong>
+  <%= @appointment.hora_inicio %>
+</p>
+
+<p>
+  <strong>Hora fin:</strong>
+  <%= @appointment.hora_fin %>
+</p>
+
+<p>
+  <strong>Motivo:</strong>
+  <%= @appointment.motivo %>
+</p>
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>
